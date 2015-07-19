@@ -76,8 +76,9 @@ def main(track):
     # UNICODE変換する文字コードは対象のターミナルに合わせて
     track = track.decode('utf-8').split(',')
 
-    db.create_tables([Twitte], True)
+    # db.create_tables([Twitte], True)
 
+    print 'watching twitter stream'
     api = twitter.Api(consumer_key=t_key.dict['cons_key'],
                       consumer_secret=t_key.dict['cons_sec'],
                       access_token_key=t_key.dict['acc_token'],
@@ -90,11 +91,12 @@ def main(track):
             print (dateutil.parser.parse(item['created_at']))
             print (item['text'])
             print (item['place'])
-            row = Twitte(createAt=dateutil.parser.parse(item['created_at']),
-                         idStr=item['id_str'],
-                         contents=item['text'])
-            row.save()
-            row = None
+            # # DBに保存する
+            # row = Twitte(createAt=dateutil.parser.parse(item['created_at']),
+            #              idStr=item['id_str'],
+            #              contents=item['text'])
+            # row.save()
+            # row = None
 
             tweet.post(reply_to=item['user']['screen_name'].decode('utf-8'),
                        text=u'明日はピアノの発表会だけどBEAT IT!!',

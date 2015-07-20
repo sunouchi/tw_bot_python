@@ -8,8 +8,7 @@ Streaming API で特定の文字列を監視して、発見したら何かのア
 - python-twitter
 - peewee
 
-## oauth認証情報の設定
-/examples/t_key.py にある cons_key, cons_sec, acc_token, acc_sec にそれぞれ設定する。
-
-## 監視する文字列とツイート内容の設定
-/examples/stream.py にそれぞれ設定してあるので、適宜変える。
+## 使い方
+- /examples/t_key.py に oauth認証情報を設定する
+- /examples/stream.py に設定してある監視する文字列やツイート内容など適宜変える
+- $ python examples/stream.py を実行する

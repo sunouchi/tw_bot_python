@@ -1,5 +1,5 @@
 .DS_Store
+*.db
 *.pyc
 *.egg-info
-examples/db/*
-examples/t_key.py
+examples/key.py

@@ -1,8 +1,5 @@
 .DS_Store
-src/bot.py
-src/*.pyc
-src/*.egg-info
-src/*/*.egg-info
-src/*/*.pyc
-src/examples/db/*
-src/examples/t_key.py
+*.pyc
+*.egg-info
+examples/db/*
+examples/t_key.py
